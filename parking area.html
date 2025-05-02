@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Play & Parking Area</title>
+
+  <!-- Font Awesome for Social Icons -->
+  <script src="https://kit.fontawesome.com/2f3a0dbb0d.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1599021604989-90479d52f3ef');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .header {
+      background-color: #f39c12;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .logo span {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .header-text {
+      text-align: right;
+      color: #333;
+      margin-left: auto;
+    }
+
+    .header-text h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: 900;
+      line-height: 1.2;
+      text-shadow: 2px 2px white;
+    }
+
+    .header-text p {
+      margin-top: 5px;
+      font-size: 16px;
+      color: white;
+      text-shadow: 1px 1px #000;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .section {
+      width: 320px;
+      background: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .section:hover {
+      background-color: #e74c3c;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .section img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    /* Home Button Style */
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #f39c12;
+      color: white;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 18px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .home-button:hover {
+      background-color: #e67e22;
+    }
+
+    
+
+    
+  </style>
+</head>
+
+<body>
+
+<a href="index.html" class="home-button">← Home</a>
+
+<div class="header">
+  <div class="nav__logo">
+    <a href="#">
+      <img src="assets/logo-dark.png" alt="logo" class="nav__logo-dark" />
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Play & Parking Area</h1>
+    <p>Enjoy a fun time while your car is safe!</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="sections">
+
+    <div class="section">
+      <img src="image/swing.jpeg" alt="Swings">
+      <h2>Swings</h2>
+      <p>Fun swings for kids to enjoy in open space!</p>
+    </div>
+
+    <div class="section">
+      <img src="image/swing3.jpeg" alt="Slides">
+      <h2>Slides</h2>
+      <p>Colorful and safe slides perfect for kids!</p>
+    </div>
+
+    <div class="section">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Parking">
+      <h2>Parking Area</h2>
+      <p>Wide and secure parking spots for your vehicles.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="section__container footer__container">
+    <div class="footer__logo">
+      <img src="assets/logo-white.png" alt="logo" />
+    </div>
+    <div class="footer__content">
+      <p>
+        Welcome to Burger Company, where passion for exceptional food and genuine hospitality come together.
+      </p>
+      <div>
+        <ul class="footer__links">
+          <li>
+            <span><i class="ri-map-pin-2-fill"></i></span>
+           Mirpur Azad Kashmir
+          </li>
+          <li>
+            <span><i class="ri-mail-fill"></i></span>
+            alishbayaqoob@123
+          </li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+          <a href="#"><i class="ri-instagram-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-whatsapp-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bar">
+    copy right restaurant.
+  </div>
+</footer>
+<!-- Footer End -->
+
+</body>
+</html>

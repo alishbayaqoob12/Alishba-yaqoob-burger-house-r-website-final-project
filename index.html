@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>MY RESTAURANT</title>
+    <style>
+      /* Scroll To Top Button CSS */
+      #scrollToTopBtn {
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 99;
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        outline: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 24px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+
+      #scrollToTopBtn:hover {
+        background-color: #e67e22;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#">
+              <img src="assets/logo-dark.png" alt="logo" class="nav__logo-dark" />
+              <img src="assets/logo-white.png" alt="logo" class="nav__logo-white" />
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#special">Special</a></li>
+          <li><a href="./special deals.html">Deals</a></li>
+          <li><a href="#event">Events</a></li>
+          <li><a href="./parking area.html">Parking Area</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="section__container header__container" id="home">
+        <div class="header__image">
+          <img src="assets/header.png" alt="header" />
+        </div>
+        <div class="header__content">
+          <h1>THE BURGER<br /><span>BITE</span></h1>
+          <h2>IT IS GOOD TIME FOR THE GREAT TASTE OF BURGER</h2>
+          <a href="./shop now.html" class="primary-btn">shop Now</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container banner__container" id="special">
+      <div class="banner__card">
+        <p>TRY IT OUT TODAY</p>
+        <h4>MOST POPULAR BURGER</h4>
+      </div>
+      <div class="banner__card">
+        <p>TRY IT OUT TODAY</p>
+        <h4>MORE FUN<br />MORE TASTE</h4>
+      </div>
+      <div class="banner__card">
+        <p>TRY IT OUT TODAY</p>
+        <h4>FRESH & CHILI</h4>
+      </div>
+    </section>
+
+    <section class="section__container order__container" id="menu">
+      <h3>ALWAYS TASTY BURGER</h3>
+      <h2 class="section__header">CHOOSE & ENJOY</h2>
+      <p class="section__description">
+        Whether you crave classic flavors or daring combinations, this is where your culinary journey begins. Indulge your cravings and savor every bite as you create your personalized burger experience with Burger Company.
+      </p>
+      <div class="order__grid">
+        <div class="order__card">
+          <img src="assets/order-1.png" alt="order" />
+          <h4>Chicken Burger</h4>
+          <p>Sink your teeth into the timeless perfection of our Chicken Burger, an experience that never goes out of style.</p>
+          <button class="btn">ORDER NOW</button>
+        </div>
+        <div class="order__card">
+          <img src="assets/order-2.png" alt="order" />
+          <h4>Veggie Delight Burger</h4>
+          <p>Embrace the vibrant flavors of our Veggie Delight Burger, a celebration of freshness and wholesome goodness.</p>
+          <button class="btn">ORDER NOW</button>
+        </div>
+        <div class="order__card">
+          <img src="assets/order-3.png" alt="order" />
+          <h4>BBQ Bacon Burger</h4>
+          <p>Indulge in a symphony of smoky, savory flavors with our BBQ Bacon Burger, grilled and topped with crispy bacon.</p>
+          <button class="btn">ORDER NOW</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container event__container" id="event">
+      <div class="event__content">
+        <div class="event__image">
+          <img src="assets/event.png" alt="event" />
+        </div>
+        <div class="event__details">
+          <h3>Discover</h3>
+          <h2 class="section__header">UPCOMING EVENTS</h2>
+          <p class="section__description">
+            From exclusive burger tastings and chef collaborations to community outreach initiatives and seasonal celebrations, there's always something special on the horizon at Burger Company.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reservation" id="contact">
+      <div class="section__container reservation__container">
+        <h3>RESERVATION</h3>
+        <h2 class="section__header">BOOK YOUR TABLE</h2>
+        <form action="/">
+          <input type="text" placeholder="NAME" />
+          <input type="email" placeholder="EMAIL" />
+          <input type="date" placeholder="DATE" />
+          <input type="time" placeholder="TIME" />
+          <input type="number" placeholder="PEOPLE" />
+          <button class="btn" type="submit">Order Now</button>
+        </form>
+      </div>
+      <img src="assets/reservation-bg-1.png" alt="reservation" class="reservation__bg-1" />
+      <img src="assets/reservation-bg-2.png" alt="reservation" class="reservation__bg-2" />
+    </section>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__logo">
+          <img src="assets/logo-white.png" alt="logo" />
+        </div>
+        <div class="footer__content">
+          <p>
+            Welcome to Burger Company, where passion for exceptional food and genuine hospitality come together.
+          </p>
+          <div>
+            <ul class="footer__links">
+              <li>
+                <span><i class="ri-map-pin-2-fill"></i></span>
+               Mirpur Azad Kashmir
+              </li>
+              <li>
+                <span><i class="ri-mail-fill"></i></span>
+                alishbayaqoob@123
+              </li>
+            </ul>
+            <div class="footer__socials">
+              <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-whatsapp-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        copy right restaurant.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+
+    <!-- Scroll To Top Script -->
+    <script>
+      let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          scrollToTopBtn.style.display = "flex";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      scrollToTopBtn.addEventListener("click", function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    </script>
+  </body>
+</html>

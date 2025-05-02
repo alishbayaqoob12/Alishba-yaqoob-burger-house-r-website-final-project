@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Order Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background Image + Overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.6); /* slightly darken */
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.5); /* white overlay */
+      z-index: -1;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      z-index: 1;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #444;
+      font-weight: 500;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    #accountField {
+      display: none;
+    }
+
+    .whatsapp-btn {
+      margin-top: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container" onsubmit="return sendWhatsApp();">
+    <h2>Order Form</h2>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="your@email.com" required>
+
+    <label for="payment">Payment Method</label>
+    <select id="payment" onchange="toggleAccountField()" required>
+      <option value="">Select Payment</option>
+      <option value="EasyPaisa">EasyPaisa</option>
+      <option value="JazzCash">JazzCash</option>
+    </select>
+
+    <div id="accountField">
+      <label for="accountNumber">Enter Account Number</label>
+      <input type="text" id="accountNumber" placeholder="e.g. 03001234567" required>
+    </div>
+
+    <button type="submit" class="whatsapp-btn">Confirm on WhatsApp</button>
+  </form>
+
+  <script>
+    function toggleAccountField() {
+      const payment = document.getElementById("payment").value;
+      const accountField = document.getElementById("accountField");
+
+      if (payment === "EasyPaisa" || payment === "JazzCash") {
+        accountField.style.display = "block";
+      } else {
+        accountField.style.display = "none";
+      }
+    }
+
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const payment = document.getElementById("payment").value;
+      const accountNumber = document.getElementById("accountNumber").value;
+
+      if ((payment === "EasyPaisa" || payment === "JazzCash") && accountNumber === "") {
+        alert("Please enter your account number.");
+        return false;
+      }
+
+      const message = `Hello! I'd like to place an order.\n\nName: ${name}\nEmail: ${email}\nPayment: ${payment}\nAccount Number: ${accountNumber}`;
+      const whatsappURL = `https://wa.me/+923474508402?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+
+      return false;
+    }
+  </script>
+
+</body>
+</html>
